@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+</head>
+
+<style>
+body {
+    background-color: #111927;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(289.90, 87%, 47%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 30%);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    color: white;
+    }
+
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 4rem 0rem;
+}
+
+#search {
+    padding: 0.6rem 0;
+    width: 24%;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    margin-left: 38%;
+    font-size: 1rem;
+}
+
+#movies {
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto);
+    gap: 3rem;
+    
+}
+
+#wallet {
+    /* border: 1px solid red; */
+    min-width: 4rem;
+    max-width: 6rem;
+    height: 4rem;
+    position: absolute;
+    right: 10rem;
+    top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.box {
+    text-align: center;
+    backdrop-filter: blur(17px) saturate(65%);
+    -webkit-backdrop-filter: blur(17px) saturate(65%);
+    background-color: rgba(98, 254, 19, 0.33);
+    border-radius: 12px;
+    /* border: 1px solid rgba(255, 255, 255, 0.125); */
+    /* background-color: rgb(59, 59, 59)  ;
+    color: white;
+    border-radius: 0.3rem;
+    box-shadow: rgb(229, 250, 111) 0px 0px 0px 3px, rgb(248, 99, 186) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(152, 89, 235) 0px 0px 0px 12px, rgb(113, 174, 253) 0px 0px 0px 15px; */
+}
+
+.box > img {
+    max-width: 90%;
+    /* padding: 2rem; */
+    margin: auto;
+    object-fit: cover;
+}
+
+.box > h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 1.2rem 0;
+}
+
+.box > button {
+    /* font-weight: bold; */
+    font-size: 1.6rem;
+    color: white;
+    margin: auto;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+
+        backdrop-filter: blur(17px) saturate(65%);
+    -webkit-backdrop-filter: blur(17px) saturate(65%);
+    background-color: rgba(183, 207, 223, 0.247);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+ .box > button:hover {
+     cursor: pointer;
+    background-color: lightcoral;
+    color: white;
+    font-size: 1.4rem;
+    transition: ease-in-out 0.3s;
+}
+</style>
+
+<body>
+    <h1>Movies List</h1>
+    
+    <div id="wallet">0</div>
+
+ 
+    <input type="text" oninput="debounce(main,1000)" placeholder="Seach Movies" id="search">
+
+    <div id="movies"></div>
+</body>
+</html>
+<script src="./movies.js"></script>
