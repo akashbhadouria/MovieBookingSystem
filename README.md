@@ -1,7 +1,7 @@
 # MovieBookingSystem
 Book your favroite movie and add unlimited wallet balance as per your requirement
 
-## texh stack used 
+## tech stack used 
 
 #### HTML, CSS, Javascript, OMDB API, Local Storage 
 
